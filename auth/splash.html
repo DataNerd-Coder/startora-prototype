@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<title>Startora — Sign in</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+<div class="phone-shell">
+  <div class="statusbar" style="background:var(--ledger);color:rgba(255,255,255,.65)"><span>9:41</span><span>STARTORA</span></div>
+  <div class="auth-screen">
+    <div class="auth-top">
+      <div class="auth-top-wm">START<span>ORA</span></div>
+      <div class="auth-illus"><svg width="220" height="140" viewBox="0 0 220 140" fill="none">
+  <g transform="rotate(-9,80,70)"><rect x="18" y="10" width="90" height="115" rx="7" fill="rgba(255,255,255,0.10)"/></g>
+  <g transform="rotate(-4,80,70)"><rect x="34" y="5" width="90" height="115" rx="7" fill="rgba(255,255,255,0.18)"/></g>
+  <rect x="50" y="0" width="92" height="116" rx="7" fill="rgba(255,255,255,0.93)"/>
+  <rect x="65" y="16" width="52" height="5" rx="2.5" fill="#E3E1DA"/>
+  <rect x="65" y="27" width="38" height="4" rx="2" fill="#E3E1DA"/>
+  <rect x="65" y="42" width="64" height="3" rx="1.5" fill="#EEE"/>
+  <rect x="65" y="51" width="54" height="3" rx="1.5" fill="#EEE"/>
+  <rect x="65" y="60" width="60" height="3" rx="1.5" fill="#EEE"/>
+  <rect x="65" y="69" width="46" height="3" rx="1.5" fill="#EEE"/>
+  <rect x="65" y="82" width="62" height="1" rx=".5" fill="#E3E1DA"/>
+  <rect x="65" y="90" width="56" height="3" rx="1.5" fill="#EEE"/>
+  <rect x="65" y="99" width="44" height="3" rx="1.5" fill="#EEE"/>
+  <circle cx="148" cy="92" r="26" fill="#0D3324"/>
+  <circle cx="148" cy="92" r="20" stroke="rgba(255,255,255,0.3)" stroke-width="1" stroke-dasharray="2.5 2.5" fill="none"/>
+  <path d="M140 92 L146 98 L157 84" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></div>
+      <div class="auth-tagline">Get legal once.<br>Stay legal forever.</div>
+    </div>
+    <div class="auth-card">
+      <div class="auth-toggle">
+        <div class="on" data-authview="login">Sign in</div>
+        <div data-authview="signup">Create account</div>
+      </div>
+      <div class="auth-view active" id="auth-login">
+        <div class="field-group"><label class="field-label">Email</label><input class="field" placeholder="chiamaka@kitchenng.com"></div>
+        <div class="field-group"><label class="field-label">Password</label><input class="field" type="password" placeholder="••••••••"></div>
+        <div class="forgot-link" onclick="nav('forgot-password.html')">Forgot password?</div>
+        <button class="btn btn-primary" onclick="nav('../app/dashboard.html')">Sign in</button>
+        <div class="auth-divider">or</div>
+        <button class="btn-google" onclick="nav('../app/dashboard.html')"><div class="g-logo"></div> Continue with Google</button>
+        <div class="auth-foot">No account? <span data-authview-switch="signup">Create one free</span></div>
+      </div>
+      <div class="auth-view" id="auth-signup">
+        <div class="field-group"><label class="field-label">Full name</label><input class="field" placeholder="Chiamaka Okonkwo"></div>
+        <div class="field-group"><label class="field-label">Email</label><input class="field" placeholder="chiamaka@kitchenng.com"></div>
+        <div class="field-group"><label class="field-label">Phone (WhatsApp)</label><input class="field" placeholder="+234 810 000 0000"></div>
+        <div class="field-group"><label class="field-label">Password</label><input class="field" type="password" placeholder="Min. 8 characters"></div>
+        <button class="btn btn-primary" onclick="nav('referral-code.html')" style="margin-top:6px">Create account</button>
+        <div class="auth-divider">or</div>
+        <button class="btn-google" onclick="nav('referral-code.html')"><div class="g-logo"></div> Continue with Google</button>
+        <div class="auth-foot">Already registered? <span data-authview-switch="login">Sign in</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="../js/app.js"></script>
+
+</body>
+</html>
