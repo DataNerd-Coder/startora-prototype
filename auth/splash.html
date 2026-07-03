@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><base href="/startora-prototype/">
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
 <title>Startora — Sign in</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
 <div class="phone-shell">
@@ -40,10 +40,10 @@
       <div class="auth-view active" id="auth-login">
         <div class="field-group"><label class="field-label">Email</label><input class="field" placeholder="chiamaka@kitchenng.com"></div>
         <div class="field-group"><label class="field-label">Password</label><input class="field" type="password" placeholder="••••••••"></div>
-        <div class="forgot-link" onclick="nav('auth/forgot-password.html')">Forgot password?</div>
-        <button class="btn btn-primary" onclick="nav('app/dashboard.html')">Sign in</button>
+        <div class="forgot-link" onclick="nav('forgot-password.html')">Forgot password?</div>
+        <button class="btn btn-primary" onclick="nav('../app/dashboard.html')">Sign in</button>
         <div class="auth-divider">or</div>
-        <button class="btn-google" onclick="nav('app/dashboard.html')"><div class="g-logo"></div> Continue with Google</button>
+        <button class="btn-google" onclick="nav('../app/dashboard.html')"><div class="g-logo"></div> Continue with Google</button>
         <div class="auth-foot">No account? <span data-authview-switch="signup">Create one free</span></div>
       </div>
       <div class="auth-view" id="auth-signup">
@@ -51,15 +51,15 @@
         <div class="field-group"><label class="field-label">Email</label><input class="field" placeholder="chiamaka@kitchenng.com"></div>
         <div class="field-group"><label class="field-label">Phone (WhatsApp)</label><input class="field" placeholder="+234 810 000 0000"></div>
         <div class="field-group"><label class="field-label">Password</label><input class="field" type="password" placeholder="Min. 8 characters"></div>
-        <button class="btn btn-primary" onclick="nav('auth/referral-code.html')" style="margin-top:6px">Create account</button>
+        <button class="btn btn-primary" onclick="nav('referral-code.html')" style="margin-top:6px">Create account</button>
         <div class="auth-divider">or</div>
-        <button class="btn-google" onclick="nav('auth/referral-code.html')"><div class="g-logo"></div> Continue with Google</button>
+        <button class="btn-google" onclick="nav('referral-code.html')"><div class="g-logo"></div> Continue with Google</button>
         <div class="auth-foot">Already registered? <span data-authview-switch="login">Sign in</span></div>
       </div>
     </div>
   </div>
 </div>
-<script src="js/app.js"></script>
+<script src="../js/app.js"></script>
 
 </body>
 </html>

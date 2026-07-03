@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><base href="/startora-prototype/">
+<head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
 <title>Startora — Compliance Map</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="../css/styles.css">
 </head>
 <body><div class="phone-shell">
 <div class="statusbar"><span>9:41</span><span>STARTORA</span></div>
 <div class="topbar">
   <div class="wordmark">START<span>ORA</span></div>
   <div class="topbar-right">
-    <div class="tb-bell" onclick="nav('app/notifications.html')" style="cursor:pointer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg><div class="bell-badge"></div></div>
-    <div class="avatar" onclick="nav('app/profile.html')" style="cursor:pointer">CO</div>
+    <div class="tb-bell" onclick="nav('notifications.html')" style="cursor:pointer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg><div class="bell-badge"></div></div>
+    <div class="avatar" onclick="nav('profile.html')" style="cursor:pointer">CO</div>
   </div>
 </div>
 <div class="body">
-  <div class="back-nav" onclick="nav('app/dashboard.html')" style="cursor:pointer"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg> Back</div>
+  <div class="back-nav" onclick="nav('dashboard.html')" style="cursor:pointer"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg> Back</div>
   <div class="ob-eyebrow">Based on your answers</div>
   <h2 style="font-family:Fraunces,serif;font-size:21px;font-weight:500;margin:0 0 6px">What Chiamaka's Kitchen needs</h2>
   <p style="font-size:12.5px;color:var(--ink-soft);margin:0 0 18px">5 obligations identified for a food business that delivers and imports goods in Lagos.</p>
@@ -30,7 +30,7 @@
     <div class="ob-card"><div class="ob-card-top"><div class="ob-name">NDPR Compliance</div><div class="ob-tag tag-required">Required</div></div><div class="ob-why">You collect delivery addresses and phone numbers. Any business handling personal data must meet NDPR obligations.</div><div class="ob-price">Included with registration</div></div>
     <div class="ob-card"><div class="ob-card-top"><div class="ob-name">Trademark Registration</div><div class="ob-tag tag-recommended">Recommended</div></div><div class="ob-why">"Chiamaka's Kitchen" isn't protected by your CAC registration alone. A trademark stops competitors from using your name.</div><div class="ob-price">₦60,000 · 6–9 month process</div></div>
     <div class="map-total"><div class="label">Total to get fully compliant</div><div class="amt">₦360,000</div></div>
-    <button class="btn btn-primary" onclick="nav('app/payment.html')">Approve all and start filing</button>
+    <button class="btn btn-primary" onclick="nav('payment.html')">Approve all and start filing</button>
     <div class="ob-foot">A human reviewer checks every filing before it's submitted.</div>
   </div>
   <div class="map-view" id="map-step">
@@ -42,16 +42,16 @@
       <div class="ob-price">₦250,000 · filed within 24 hours</div>
     </div>
     <div class="stepper-actions">
-      <button class="btn btn-primary" onclick="nav('app/payment.html')">Approve this one</button>
+      <button class="btn btn-primary" onclick="nav('payment.html')">Approve this one</button>
       <button class="btn btn-skip">Decide later</button>
     </div>
     <div class="ob-foot">Already approved: CAC Registration. Up next: NDPR, Trademark.</div>
   </div>
 </div>
 <div class="tabbar">
-  <div class="on" onclick="nav('app/dashboard.html')" style="cursor:pointer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg><span>Home</span></div>
-  <div onclick="nav('app/filing-status.html')" style="cursor:pointer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg><span>Filings</span></div>
-  <div onclick="nav('app/docs.html')" style="cursor:pointer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/></svg><span>Docs</span></div>
-  <div onclick="nav('app/services.html')" style="cursor:pointer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg><span>Services</span></div>
+  <div class="on" onclick="nav('dashboard.html')" style="cursor:pointer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg><span>Home</span></div>
+  <div onclick="nav('filing-status.html')" style="cursor:pointer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg><span>Filings</span></div>
+  <div onclick="nav('docs.html')" style="cursor:pointer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/></svg><span>Docs</span></div>
+  <div onclick="nav('services.html')" style="cursor:pointer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg><span>Services</span></div>
 </div>
-</div><script src="js/app.js"></script></body></html>
+</div><script src="../js/app.js"></script></body></html>
