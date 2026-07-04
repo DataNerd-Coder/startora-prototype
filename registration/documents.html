@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<title>Startora — Documents</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/styles.css">
+</head>
+<body><div class="phone-shell">
+<div class="statusbar"><span>9:41</span><span>STARTORA</span></div>
+<div class="topbar">
+  <div class="wordmark">START<span>ORA</span></div>
+  <div class="topbar-right">
+    <div class="tb-bell" onclick="nav('../app/notifications.html')" style="cursor:pointer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg><div class="bell-badge"></div></div>
+    <div class="avatar" onclick="nav('../app/profile.html')" style="cursor:pointer">CO</div>
+  </div>
+</div>
+<div class="body">
+  <div class="back-nav" onclick="nav('witness.html')" style="cursor:pointer"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg> Back</div>
+  <div class="reg-progress"><div class="reg-progress-seg done"></div><div class="reg-progress-seg done"></div><div class="reg-progress-seg now"></div></div><div class="reg-step-label">3 · Documents</div>
+  <h2 style="font-family:Fraunces,serif;font-size:21px;font-weight:500;margin:0 0 6px">Documents</h2>
+  <p style="font-size:12.5px;color:var(--ink-soft);margin:0 0 20px;line-height:1.5">We need a signature, NIN slip, and passport photo for each shareholder and witness. Upload everything here before we file.</p>
+
+  <div class="doc-person-block">
+    <div class="doc-person-head">
+      <div class="doc-person-av">CO</div>
+      <div style="font-size:13px;font-weight:600">Chiamaka Okonkwo</div>
+      <div style="font-size:11.5px;color:var(--ink-soft);margin-left:4px">· Director</div>
+    </div>
+    <div class="upload-row">
+      <div class="upload-item uploaded" onclick="this.classList.toggle('uploaded')">
+        <div class="upload-item-icon">✍️</div>
+        <div class="upload-item-label">Signature</div>
+      </div>
+      <div class="upload-item uploaded" onclick="this.classList.toggle('uploaded')">
+        <div class="upload-item-icon">🪪</div>
+        <div class="upload-item-label">NIN Slip</div>
+      </div>
+      <div class="upload-item" onclick="this.classList.toggle('uploaded')">
+        <div class="upload-item-icon">📷</div>
+        <div class="upload-item-label">Passport Photo</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="doc-person-block">
+    <div class="doc-person-head">
+      <div class="doc-person-av" style="background:var(--amber)">EO</div>
+      <div style="font-size:13px;font-weight:600">Emeka Okafor</div>
+      <div style="font-size:11.5px;color:var(--ink-soft);margin-left:4px">· Shareholder</div>
+    </div>
+    <div class="upload-row">
+      <div class="upload-item" onclick="this.classList.toggle('uploaded')">
+        <div class="upload-item-icon">✍️</div>
+        <div class="upload-item-label">Signature</div>
+      </div>
+      <div class="upload-item" onclick="this.classList.toggle('uploaded')">
+        <div class="upload-item-icon">🪪</div>
+        <div class="upload-item-label">NIN Slip</div>
+      </div>
+      <div class="upload-item" onclick="this.classList.toggle('uploaded')">
+        <div class="upload-item-icon">📷</div>
+        <div class="upload-item-label">Passport Photo</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="doc-person-block">
+    <div class="doc-person-head">
+      <div class="doc-person-av" style="background:var(--ledger-soft);color:var(--ledger)">WI</div>
+      <div style="font-size:13px;font-weight:600">Witness</div>
+      <div style="font-size:11.5px;color:var(--ink-soft);margin-left:4px">· Add witness first</div>
+    </div>
+    <button class="add-strip" onclick="openModal('doc-modal')">
+      <div class="add-strip-icon">+</div> Add witness documents
+    </button>
+  </div>
+
+  <button class="btn btn-primary" onclick="nav('preview.html')" style="margin-top:8px">Continue to Preview →</button>
+  <div style="text-align:center;font-size:12px;color:var(--ink-soft);margin-top:14px">Tap any document slot to upload. All uploads are encrypted and stored securely.</div>
+</div>
+
+<div class="modal-overlay" id="doc-modal">
+  <div class="modal-card">
+    <div class="modal-handle"></div>
+    <div class="modal-head">
+      <div class="modal-title">Upload Documents</div>
+      <button class="modal-close" onclick="closeModal('doc-modal')">✕</button>
+    </div>
+    <p style="font-size:13px;color:var(--ink-soft);margin:0 0 20px;line-height:1.5">Upload the required documents for Chiamaka Okonkwo. Files must be clear and legible — JPG, PNG, or PDF under 5MB.</p>
+    <label class="field-label">Signature</label>
+    <div class="upload-zone" onclick="this.classList.toggle('done')">
+      <div class="upload-zone-icon">✍️</div>
+      <div class="upload-zone-text">Upload signature</div>
+      <div class="upload-zone-sub">Sign on white paper, photograph clearly · PNG or JPG</div>
+    </div>
+    <label class="field-label">NIN Slip</label>
+    <div class="upload-zone" onclick="this.classList.toggle('done')">
+      <div class="upload-zone-icon">🪪</div>
+      <div class="upload-zone-text">Upload NIN slip</div>
+      <div class="upload-zone-sub">Download from NIMC or photograph your NIN card</div>
+    </div>
+    <label class="field-label">Passport Photograph</label>
+    <div class="upload-zone" onclick="this.classList.toggle('done')">
+      <div class="upload-zone-icon">📷</div>
+      <div class="upload-zone-text">Upload passport photo</div>
+      <div class="upload-zone-sub">White background · face clearly visible · recent</div>
+    </div>
+    <button class="btn btn-primary" onclick="closeModal('doc-modal')" style="margin-top:8px">Save documents</button>
+  </div>
+</div>
+</div><script src="../js/app.js"></script></body></html>

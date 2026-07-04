@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<title>Startora — Contact</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/styles.css">
+</head>
+<body><div class="phone-shell">
+<div class="statusbar"><span>9:41</span><span>STARTORA</span></div>
+<div class="topbar">
+  <div class="wordmark">START<span>ORA</span></div>
+  <div class="topbar-right">
+    <div class="tb-bell" onclick="nav('notifications.html')" style="cursor:pointer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg><div class="bell-badge"></div></div>
+    <div class="avatar" onclick="nav('profile.html')" style="cursor:pointer">CO</div>
+  </div>
+</div>
+<div class="body">
+  <div class="back-nav" onclick="nav('services.html')" style="cursor:pointer"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg> Back</div>
+  <h2 style="font-family:Fraunces,serif;font-size:21px;font-weight:500;margin:0 0 4px">Talk to our team</h2>
+  <p style="font-size:12.5px;color:var(--ink-soft);margin:0 0 20px">Tell us what you need. A compliance specialist will get back to you within 24 hours.</p>
+  <div class="field-group"><label class="field-label">Your name</label><input class="field" value="Chiamaka Okonkwo" readonly style="margin-bottom:0"></div>
+  <div class="field-group"><label class="field-label">Email address</label><input class="field" value="chiamaka@kitchenng.com" readonly style="margin-bottom:0"></div>
+  <div class="field-group"><label class="field-label">Business</label><input class="field" value="Chiamaka's Kitchen" readonly style="margin-bottom:0"></div>
+  <div class="field-group"><label class="field-label">What do you need help with?</label><textarea class="textarea" placeholder="Describe your situation. The more detail you give, the faster we can help."></textarea></div>
+  <button class="btn btn-primary">Send to compliance team</button>
+  <div style="text-align:center;font-size:12px;color:var(--ink-soft);margin-top:16px">We don't do bots. A real person will read this and respond.</div>
+</div>
+<div class="tabbar">
+  <div onclick="nav('dashboard.html')" style="cursor:pointer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg><span>Home</span></div>
+  <div onclick="nav('filing-status.html')" style="cursor:pointer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg><span>Filings</span></div>
+  <div onclick="nav('docs.html')" style="cursor:pointer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/></svg><span>Docs</span></div>
+  <div class="on" onclick="nav('services.html')" style="cursor:pointer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg><span>Services</span></div>
+</div>
+</div><script src="../js/app.js"></script></body></html>
