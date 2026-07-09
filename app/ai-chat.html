@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<title>Startora — Ask Startora</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+<div class="phone-shell">
+<div class="ai-chat-screen">
+          <div class="ai-chat-head">
+            <div>
+              <div class="ai-chat-title">Ask Startora</div>
+              <div class="ai-chat-sub">Compliance advisor · Chiamaka's Kitchen</div>
+            </div>
+            <div style="display:flex;align-items:center;gap:10px">
+              <div data-screen="ai-voice" onclick="nav('../app/ai-voice.html')" style="cursor:pointer;opacity:.7"><svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="5" width="3" height="8" rx="1.5" fill="var(--ledger)"/>
+  <rect x="4.5" y="2" width="3" height="14" rx="1.5" fill="var(--ledger)"/>
+  <rect x="9" y="0" width="3" height="18" rx="1.5" fill="var(--ledger)"/>
+  <rect x="13.5" y="2" width="3" height="14" rx="1.5" fill="var(--ledger)"/>
+  <rect x="18" y="5" width="2" height="8" rx="1" fill="var(--ledger)"/>
+</svg></div>
+              <button class="ai-close" data-screen="dashboard" onclick="nav('../app/dashboard.html')">✕</button>
+            </div>
+          </div>
+          <div class="ai-messages">
+            <div class="ai-msg ai">
+              <div class="ai-bubble">Good morning Chiamaka. Chiamaka's Kitchen has 2 things needing attention. What do you want to understand?</div>
+              <div class="ai-msg-time">9:41 AM</div>
+              <div class="ai-suggestions">
+                <div class="ai-chip" onclick="sendAI(this)">Why do I need NAFDAC?</div>
+                <div class="ai-chip" onclick="sendAI(this)">What happens if I miss annual returns?</div>
+                <div class="ai-chip" onclick="sendAI(this)">Do I qualify for SCUML?</div>
+                <div class="ai-chip" onclick="sendAI(this)">Explain my compliance score</div>
+              </div>
+            </div>
+          </div>
+          <div class="ai-input-row">
+            <input class="ai-input" id="ai-text-input" placeholder="Ask a compliance question…" onkeydown="if(event.key==='Enter')sendAIText()">
+            <button class="ai-send" onclick="sendAIText()">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+          </div>
+        </div>
+<script>document.getElementById("ai-text-input")?.addEventListener("keydown",function(e){if(e.key==="Enter")sendAIText();});</script>
+</div>
+<script src="../js/app.js"></script>
+</body>
+</html>

@@ -1,66 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
 <title>Startora — Payment</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/styles.css">
 </head>
-<body><div class="phone-shell">
-<div class="statusbar"><span>9:41</span><span>STARTORA</span></div>
+<body>
+<div class="phone-shell">
 <div class="topbar">
-  <div class="wordmark">START<span>ORA</span></div>
-  <div class="topbar-right">
-    <div class="tb-bell" onclick="nav('notifications.html')" style="cursor:pointer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg><div class="bell-badge"></div></div>
-    <div class="avatar" onclick="nav('profile.html')" style="cursor:pointer">CO</div>
-  </div>
+          <div class="wordmark">START<span>ORA</span></div>
+          <div class="topbar-right">
+            <div class="ai-mic-btn" data-screen="ai-voice" onclick="nav('../app/ai-voice.html')" style="cursor:pointer;width:34px;height:34px;display:flex;align-items:center;justify-content:center;border-radius:50%;border:1.5px solid var(--line);background:var(--paper-raised);margin-right:2px"><svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="5" width="3" height="8" rx="1.5" fill="var(--ledger)"/>
+  <rect x="4.5" y="2" width="3" height="14" rx="1.5" fill="var(--ledger)"/>
+  <rect x="9" y="0" width="3" height="18" rx="1.5" fill="var(--ledger)"/>
+  <rect x="13.5" y="2" width="3" height="14" rx="1.5" fill="var(--ledger)"/>
+  <rect x="18" y="5" width="2" height="8" rx="1" fill="var(--ledger)"/>
+</svg><span class="ai-ask-label">Ask me</span></div>
+            <div class="tb-bell" data-screen="notifications" onclick="nav('../app/notifications.html')">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>
+              <div class="bell-badge"></div>
+            </div>
+            <div class="avatar" data-screen="profile" onclick="nav('../app/profile.html')">CO</div>
+          </div>
+        </div>
+        <div class="body">
+
+          <div class="pay-form">
+            <div class="back-nav" data-screen="map" onclick="nav('../app/compliance-map.html')"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg> Back</div>
+          <div class="pay-head">
+              <h2>Review &amp; pay</h2>
+              <p>Chiamaka's Kitchen · 3 obligations approved</p>
+            </div>
+
+            <div class="pay-item">
+              <div>
+                <div class="pay-item-name">CAC Business Registration</div>
+                <div class="pay-item-meta">Filed within 24 hours</div>
+              </div>
+              <div class="pay-item-price">₦50,000</div>
+            </div>
+            <div class="pay-item">
+              <div>
+                <div class="pay-item-name">NAFDAC Registration</div>
+                <div class="pay-item-meta">Packaged food · end-to-end filing</div>
+              </div>
+              <div class="pay-item-price">₦250,000</div>
+            </div>
+            <div class="pay-item">
+              <div>
+                <div class="pay-item-name">NDPR Compliance</div>
+                <div class="pay-item-meta">Privacy policy + data audit</div>
+              </div>
+              <div class="pay-item-price">Included</div>
+            </div>
+
+            <div class="pay-total">
+              <div class="label">Total</div>
+              <div class="amount">₦300,000</div>
+            </div>
+
+            <div class="pay-methods">
+              <div class="pay-method-label">Pay with</div>
+              <div class="method-opts">
+                <div class="method-opt sel" data-method="card">
+                  <div class="m-icon">💳</div>
+                  <div class="m-label">Card</div>
+                </div>
+                <div class="method-opt" data-method="transfer">
+                  <div class="m-icon">🏦</div>
+                  <div class="m-label">Transfer</div>
+                </div>
+                <div class="method-opt" data-method="ussd">
+                  <div class="m-icon">📱</div>
+                  <div class="m-label">USSD</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card fields (default) -->
+            <div id="card-fields">
+              <div class="auth-field-group">
+                <label class="auth-label">Card number</label>
+                <input class="field" placeholder="0000 0000 0000 0000" style="margin-bottom:0">
+              </div>
+              <div style="display:flex;gap:10px">
+                <div class="auth-field-group" style="flex:1">
+                  <label class="auth-label">Expiry</label>
+                  <input class="field" placeholder="MM / YY" style="margin-bottom:0">
+                </div>
+                <div class="auth-field-group" style="flex:1">
+                  <label class="auth-label">CVV</label>
+                  <input class="field" placeholder="•••" style="margin-bottom:0">
+                </div>
+              </div>
+            </div>
+
+            <!-- Bank transfer details (hidden by default) -->
+            <div class="bank-details" id="bank-fields">
+              <div class="bank-row"><span class="bk">Bank</span><span class="bv">Wema Bank</span></div>
+              <div class="bank-row"><span class="bk">Account name</span><span class="bv">Startora Ltd</span></div>
+              <div class="bank-row"><span class="bk">Account number</span><span class="bv">0123456789</span></div>
+              <div class="bank-row"><span class="bk">Amount</span><span class="bv">₦300,000</span></div>
+              <div class="bank-copy">Copy account number</div>
+            </div>
+
+            <button class="btn btn-primary" id="pay-btn" style="margin-top:16px" onclick="document.querySelector('.pay-form')?.classList.add('hide');document.getElementById('pay-success')?.classList.add('show')">Pay ₦300,000</button>
+            <div class="pay-secure">🔒 Secured by Paystack · end-to-end encrypted</div>
+          </div>
+
+          <!-- SUCCESS STATE -->
+          <div class="pay-success" id="pay-success">
+            <div class="success-stamp">✓</div>
+            <div class="success-title">Payment received</div>
+            <div class="success-sub">₦300,000 confirmed. Your filings are queued and will be reviewed by our compliance team within the hour.</div>
+            <button class="btn btn-primary" data-screen="shareholders" onclick="nav('../registration/shareholders.html')" style="width:100%">Complete CAC registration →</button>
+              <button class="btn btn-ghost" data-screen="payment-receipt" onclick="nav('../app/payment-receipt.html')" style="margin-top:10px;width:100%">View receipt</button>
+            <button class="btn btn-ghost" data-screen="dashboard" onclick="nav('../app/dashboard.html')" style="margin-top:10px;width:100%">Back to home</button>
+          </div>
+
+        </div>
+        <div class="tabbar">
+          <div data-screen="dashboard" onclick="nav('../app/dashboard.html')"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg><span>Home</span></div>
+          <div data-screen="filing" onclick="nav('../app/filing-status.html')"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg><span>Filings</span></div>
+          <div data-screen="docs" onclick="nav('../app/docs.html')"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/></svg><span>Docs</span></div>
+          <div data-screen="services" onclick="nav('../app/services.html')"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg><span>Services</span></div>
+        </div>
 </div>
-<div class="body">
-  <div class="back-nav" onclick="nav('compliance-map.html')" style="cursor:pointer"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg> Back</div>
-  <h2 style="font-family:Fraunces,serif;font-size:21px;font-weight:500;margin:0 0 4px">Review &amp; pay</h2>
-  <p style="font-size:12.5px;color:var(--ink-soft);margin:0 0 20px">Chiamaka's Kitchen · 3 obligations approved</p>
-  <div class="pay-form">
-    <div class="pay-item"><div><div class="pay-item-name">CAC Business Registration</div><div class="pay-item-meta">Filed within 24 hours</div></div><div class="pay-item-price">₦50,000</div></div>
-    <div class="pay-item"><div><div class="pay-item-name">NAFDAC Registration</div><div class="pay-item-meta">Packaged food · end-to-end filing</div></div><div class="pay-item-price">₦250,000</div></div>
-    <div class="pay-item"><div><div class="pay-item-name">NDPR Compliance</div><div class="pay-item-meta">Privacy policy + data audit</div></div><div class="pay-item-price">Included</div></div>
-    <div class="pay-total"><div style="font-size:12.5px;font-weight:500">Total</div><div class="amount">₦300,000</div></div>
-    <div style="margin:20px 0 10px">
-      <div style="font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:10px">Pay with</div>
-      <div class="method-opts">
-        <div class="method-opt sel" data-method="card"><div class="m-icon">💳</div><div class="m-label">Card</div></div>
-        <div class="method-opt" data-method="transfer"><div class="m-icon">🏦</div><div class="m-label">Transfer</div></div>
-        <div class="method-opt" data-method="ussd"><div class="m-icon">📱</div><div class="m-label">USSD</div></div>
-      </div>
-    </div>
-    <div id="card-fields">
-      <div class="field-group"><label class="field-label">Card number</label><input class="field" placeholder="0000 0000 0000 0000" style="margin-bottom:0"></div>
-      <div style="display:flex;gap:10px">
-        <div class="field-group" style="flex:1"><label class="field-label">Expiry</label><input class="field" placeholder="MM/YY" style="margin-bottom:0"></div>
-        <div class="field-group" style="flex:1"><label class="field-label">CVV</label><input class="field" placeholder="•••" style="margin-bottom:0"></div>
-      </div>
-    </div>
-    <div class="bank-details" id="bank-fields">
-      <div class="bank-row"><span class="bk">Bank</span><span class="bv">Wema Bank</span></div>
-      <div class="bank-row"><span class="bk">Account name</span><span class="bv">Startora Ltd</span></div>
-      <div class="bank-row"><span class="bk">Account number</span><span class="bv">0123456789</span></div>
-      <div class="bank-row"><span class="bk">Amount</span><span class="bv">₦300,000</span></div>
-      <div style="font-size:11.5px;color:var(--ledger);font-weight:500;text-align:center;margin-top:10px;cursor:pointer">Copy account number</div>
-    </div>
-    <button class="btn btn-primary" id="pay-btn" style="margin-top:16px">Pay ₦300,000</button>
-    <div style="text-align:center;font-size:11.5px;color:var(--ink-soft);margin-top:10px">🔒 Secured by Paystack</div>
-  </div>
-  <div class="pay-success" id="pay-success">
-    <div style="width:64px;height:64px;border-radius:50%;background:var(--ledger-soft);border:2px solid var(--ledger);display:flex;align-items:center;justify-content:center;font-size:28px;margin-bottom:20px">✓</div>
-    <div style="font-family:Fraunces,serif;font-size:22px;font-weight:500;margin-bottom:8px">Payment received</div>
-    <div style="font-size:13px;color:var(--ink-soft);line-height:1.5;margin-bottom:28px">₦300,000 confirmed. Your filings are queued and will be reviewed by our compliance team within the hour.</div>
-    <button class="btn btn-primary" onclick="nav('../registration/shareholders.html')" style="width:100%">Complete your CAC registration →</button>
-    <button class="btn btn-ghost" onclick="nav('payment-receipt.html')" style="margin-top:10px;width:100%">View receipt</button>
-  </div>
-</div>
-<div class="tabbar">
-  <div class="on" onclick="nav('dashboard.html')" style="cursor:pointer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg><span>Home</span></div>
-  <div onclick="nav('filing-status.html')" style="cursor:pointer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg><span>Filings</span></div>
-  <div onclick="nav('docs.html')" style="cursor:pointer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/></svg><span>Docs</span></div>
-  <div onclick="nav('services.html')" style="cursor:pointer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg><span>Services</span></div>
-</div>
-</div><script src="../js/app.js"></script></body></html>
+<script src="../js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<title>Startora — SCUML — Review</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+<div class="phone-shell">
+<div class="topbar">
+  <div class="wordmark">START<span>ORA</span></div>
+  <div class="topbar-right">
+    <div class="ai-mic-btn" data-screen="ai-voice" onclick="nav('../app/ai-voice.html')" style="cursor:pointer;width:32px;height:32px;display:flex;align-items:center;justify-content:center;border-radius:50%;position:relative;border:1.5px solid var(--line);background:var(--paper-raised)" title="Ask Startora"><svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="5" width="3" height="8" rx="1.5" fill="var(--ledger)"/>
+  <rect x="4.5" y="2" width="3" height="14" rx="1.5" fill="var(--ledger)"/>
+  <rect x="9" y="0" width="3" height="18" rx="1.5" fill="var(--ledger)"/>
+  <rect x="13.5" y="2" width="3" height="14" rx="1.5" fill="var(--ledger)"/>
+  <rect x="18" y="5" width="2" height="8" rx="1" fill="var(--ledger)"/>
+</svg></div>
+    <div class="tb-bell" data-screen="notifications" onclick="nav('../app/notifications.html')" style="cursor:pointer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg><div class="bell-badge"></div></div>
+    <div class="avatar" data-screen="profile" onclick="nav('../app/profile.html')" style="cursor:pointer">CO</div>
+  </div>
+</div>
+        <div class="body">
+          <div class="back-nav" data-screen="scuml-step2" onclick="nav('../registration/scuml-step2.html')" style="cursor:pointer"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg> Back</div>
+          <div class="reg-progress"><div class="reg-progress-seg done"></div><div class="reg-progress-seg done"></div><div class="reg-progress-seg now"></div><div class="reg-progress-seg "></div><div class="reg-progress-seg "></div></div>
+          <div class="reg-eyebrow">SCUML Registration · Step 3 of 4</div>
+          <h2 style="font-family:Fraunces,serif;font-size:21px;font-weight:500;margin:0 0 6px">Review before we submit</h2>
+          <p style="font-size:12.5px;color:var(--ink-soft);margin:0 0 20px;line-height:1.5">A Startora compliance reviewer will verify everything before sending to the SCUML portal.</p>
+          <div class="prev-block">
+            <div class="prev-block-head"><div class="prev-block-title">Business</div><div class="prev-edit" data-screen="scuml-step1" onclick="nav('../registration/scuml-step1.html')">Edit</div></div>
+            <div class="prev-row"><span class="pk">Name</span><span class="pv">Chiamaka's Kitchen</span></div>
+            <div class="prev-row"><span class="pk">Category</span><span class="pv">Real Estate</span></div>
+            <div class="prev-row"><span class="pk">RC Number</span><span class="pv">BN-2026-481923</span></div>
+          </div>
+          <div class="prev-block">
+            <div class="prev-block-head"><div class="prev-block-title">Documents</div><div class="prev-edit" data-screen="scuml-step2" onclick="nav('../registration/scuml-step2.html')">Edit</div></div>
+            <div class="prev-row"><span class="pk">CAC Certificate</span><span class="pv" style="color:var(--ledger)">✓ Uploaded</span></div>
+            <div class="prev-row"><span class="pk">Status Report</span><span class="pv" style="color:var(--ledger)">✓ Uploaded</span></div>
+            <div class="prev-row"><span class="pk">TIN</span><span class="pv" style="color:var(--ledger)">✓ Provided</span></div>
+            <div class="prev-row"><span class="pk">BVN</span><span class="pv" style="color:var(--ledger)">✓ Provided</span></div>
+            <div class="prev-row"><span class="pk">Valid ID</span><span class="pv" style="color:var(--ledger)">✓ Uploaded</span></div>
+          </div>
+          <div class="info-box">SCUML registration is completely free. No payment required. Certificate delivered by email in 14–21 days.</div>
+          <button class="btn btn-primary" data-screen="scuml-tracking" onclick="nav('../registration/scuml-tracking.html')">Submit to SCUML →</button>
+          <button class="btn btn-ghost" data-screen="scuml-step2" onclick="nav('../registration/scuml-step2.html')">Go back and edit</button>
+        </div>
+</div>
+<script src="../js/app.js"></script>
+</body>
+</html>

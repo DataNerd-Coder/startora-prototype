@@ -9,22 +9,30 @@
 </head>
 <body>
 <div class="phone-shell">
-  <div class="statusbar" style="background:var(--paper);color:var(--ink-soft)"><span>9:41</span></div>
-  <div class="flow-screen">
-    <div class="flow-topnav">
-      <button class="flow-back" onclick="nav('referral-code.html')"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg> Back</button>
-      <div class="flow-step-dots"><div class="flow-dot"></div><div class="flow-dot on"></div><div class="flow-dot"></div><div class="flow-dot"></div></div>
-    </div>
-    <div class="flow-body">
-      <div class="flow-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--ledger)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
-      <div class="flow-title">Check your WhatsApp</div>
-      <div class="flow-sub">We sent a 6-digit code to <strong>+234 810 ••• 7730</strong></div>
-      <div class="otp-row"><div class="otp-box  filled">4</div><div class="otp-box  filled">5</div><div class="otp-box  filled">6</div><div class="otp-box">_</div><div class="otp-box">_</div><div class="otp-box">_</div></div><div class="resend-link">Didn't get it? <span>Resend code</span></div>
-      <button class="btn btn-primary" onclick="nav('email-verify.html')">Verify and continue</button>
-    </div>
-  </div>
+<div class="flow-screen">
+          <div class="flow-topnav">
+            <div class="flow-back" data-screen="referral-code" onclick="nav('../auth/referral-code.html')"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg> Back</div>
+            <div class="flow-step-dots"><div class="flow-dot"></div><div class="flow-dot on"></div><div class="flow-dot"></div><div class="flow-dot"></div></div>
+          </div>
+          <div class="flow-body">
+            <div class="flow-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--ledger)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+            </div>
+            <div class="flow-title">Check your WhatsApp</div>
+            <div class="flow-sub">We sent a 6-digit code to your WhatsApp at<br><strong>+234 810 ••• 7730</strong></div>
+            <div class="otp-row">
+              <div class="otp-box filled">4</div>
+              <div class="otp-box filled">8</div>
+              <div class="otp-box filled">1</div>
+              <div class="otp-box">_</div>
+              <div class="otp-box">_</div>
+              <div class="otp-box">_</div>
+            </div>
+            <div class="resend-link">Didn't get it? <span>Resend code</span></div>
+            <button class="btn btn-primary" data-screen="email-verify" onclick="nav('../auth/email-verify.html')">Verify and continue</button>
+          </div>
+        </div>
 </div>
 <script src="../js/app.js"></script>
-
 </body>
 </html>

@@ -1,67 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-<title>Startora — Preview</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<title>Startora — Preview & Submit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/styles.css">
 </head>
-<body><div class="phone-shell">
-<div class="statusbar"><span>9:41</span><span>STARTORA</span></div>
+<body>
+<div class="phone-shell">
 <div class="topbar">
-  <div class="wordmark">START<span>ORA</span></div>
-  <div class="topbar-right">
-    <div class="tb-bell" onclick="nav('../app/notifications.html')" style="cursor:pointer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg><div class="bell-badge"></div></div>
-    <div class="avatar" onclick="nav('../app/profile.html')" style="cursor:pointer">CO</div>
-  </div>
+          <div class="wordmark">START<span>ORA</span></div>
+          <div class="topbar-right">
+            <div class="ai-mic-btn" data-screen="ai-voice" onclick="nav('../app/ai-voice.html')" style="cursor:pointer;width:34px;height:34px;display:flex;align-items:center;justify-content:center;border-radius:50%;border:1.5px solid var(--line);background:var(--paper-raised);margin-right:2px"><svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="5" width="3" height="8" rx="1.5" fill="var(--ledger)"/>
+  <rect x="4.5" y="2" width="3" height="14" rx="1.5" fill="var(--ledger)"/>
+  <rect x="9" y="0" width="3" height="18" rx="1.5" fill="var(--ledger)"/>
+  <rect x="13.5" y="2" width="3" height="14" rx="1.5" fill="var(--ledger)"/>
+  <rect x="18" y="5" width="2" height="8" rx="1" fill="var(--ledger)"/>
+</svg><span class="ai-ask-label">Ask me</span></div>
+            <div class="tb-bell" data-screen="notifications" onclick="nav('../app/notifications.html')"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg><div class="bell-badge"></div></div>
+            <div class="avatar" data-screen="profile" onclick="nav('../app/profile.html')">CO</div>
+          </div>
+        </div>
+        <div class="body">
+          <div class="back-nav" data-screen="documents" onclick="nav('../registration/documents.html')"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg> Back</div>
+          <h2 style="font-family:Fraunces,serif;font-size:21px;font-weight:500;margin:0 0 4px">Preview &amp; submit</h2>
+          <p style="font-size:12.5px;color:var(--ink-soft);margin:0 0 20px">Review everything before we send to CAC. Once submitted, changes require a formal amendment.</p>
+          <div class="prev-block">
+            <div class="prev-block-head"><div class="prev-block-title">Business</div><div class="prev-edit" data-screen="onboarding" onclick="nav('../onboarding/step3.html')">Edit</div></div>
+            <div class="prev-row"><span class="pk">Name</span><span class="pv">Chiamaka's Kitchen</span></div>
+            <div class="prev-row"><span class="pk">Type</span><span class="pv">Business Name (BN)</span></div>
+            <div class="prev-row"><span class="pk">State</span><span class="pv">Lagos</span></div>
+          </div>
+          <div class="prev-block">
+            <div class="prev-block-head"><div class="prev-block-title">Shareholders</div><div class="prev-edit" data-screen="shareholders" onclick="nav('../registration/shareholders.html')">Edit</div></div>
+            <div class="prev-row"><span class="pk">Chiamaka Okonkwo</span><span class="pv">70% · Director</span></div>
+            <div class="prev-row"><span class="pk">Emeka Okafor</span><span class="pv">30% · Shareholder</span></div>
+          </div>
+          <div class="prev-block">
+            <div class="prev-block-head"><div class="prev-block-title">Witness</div><div class="prev-edit" data-screen="witness" onclick="nav('../registration/witness.html')">Edit</div></div>
+            <div class="prev-row"><span class="pk">Name</span><span class="pv">Chidi Okonkwo</span></div>
+            <div class="prev-row"><span class="pk">Relationship</span><span class="pv">Spouse</span></div>
+          </div>
+          <div class="prev-block">
+            <div class="prev-block-head"><div class="prev-block-title">Documents</div><div class="prev-edit" data-screen="documents" onclick="nav('../registration/documents.html')">Edit</div></div>
+            <div class="prev-row"><span class="pk">Chiamaka's signature</span><span class="pv" style="color:var(--ledger)">✓ Uploaded</span></div>
+            <div class="prev-row"><span class="pk">Chiamaka's NIN</span><span class="pv" style="color:var(--ledger)">✓ Uploaded</span></div>
+            <div class="prev-row"><span class="pk">Emeka's documents</span><span class="pv" style="color:var(--amber)">Pending</span></div>
+          </div>
+          <div style="background:var(--ledger-soft);border-radius:8px;padding:13px;margin-bottom:20px;font-size:12.5px;color:var(--ledger);line-height:1.5">A Startora compliance reviewer will check everything before submission. You'll be notified immediately if anything is missing.</div>
+          <button class="btn btn-primary" data-screen="reg-tracking" onclick="nav('../registration/tracking.html')">Submit to CAC →</button>
+          <button class="btn btn-ghost" data-screen="documents" onclick="nav('../registration/documents.html')">Back and complete</button>
+        </div>
 </div>
-<div class="body">
-  <div class="back-nav" onclick="nav('documents.html')" style="cursor:pointer"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg> Back</div>
-  <h2 style="font-family:Fraunces,serif;font-size:21px;font-weight:500;margin:0 0 4px">Preview &amp; submit</h2>
-  <p style="font-size:12.5px;color:var(--ink-soft);margin:0 0 20px">Review everything before we send to CAC. Once submitted, changes require a formal amendment.</p>
-
-  <div class="prev-block">
-    <div class="prev-block-head">
-      <div class="prev-block-title">Business</div>
-      <div class="prev-edit" onclick="nav('../onboarding/step1.html')">Edit</div>
-    </div>
-    <div class="prev-row"><span class="pk">Name</span><span class="pv">Chiamaka's Kitchen</span></div>
-    <div class="prev-row"><span class="pk">Type</span><span class="pv">Business Name (BN)</span></div>
-    <div class="prev-row"><span class="pk">State</span><span class="pv">Lagos</span></div>
-    <div class="prev-row"><span class="pk">Sector</span><span class="pv">Food &amp; Beverage</span></div>
-  </div>
-
-  <div class="prev-block">
-    <div class="prev-block-head">
-      <div class="prev-block-title">Shareholders</div>
-      <div class="prev-edit" onclick="nav('shareholders.html')">Edit</div>
-    </div>
-    <div class="prev-row"><span class="pk">Chiamaka Okonkwo</span><span class="pv">70% · Director</span></div>
-    <div class="prev-row"><span class="pk">Emeka Okafor</span><span class="pv">30% · Shareholder</span></div>
-  </div>
-
-  <div class="prev-block">
-    <div class="prev-block-head">
-      <div class="prev-block-title">Witness</div>
-      <div class="prev-edit" onclick="nav('witness.html')">Edit</div>
-    </div>
-    <div class="prev-row"><span class="pk">Name</span><span class="pv">Chidi Okonkwo</span></div>
-    <div class="prev-row"><span class="pk">Relationship</span><span class="pv">Spouse</span></div>
-  </div>
-
-  <div class="prev-block">
-    <div class="prev-block-head">
-      <div class="prev-block-title">Documents</div>
-      <div class="prev-edit" onclick="nav('documents.html')">Edit</div>
-    </div>
-    <div class="prev-row"><span class="pk">Chiamaka's signature</span><span class="pv" style="color:var(--ledger)">✓ Uploaded</span></div>
-    <div class="prev-row"><span class="pk">Chiamaka's NIN</span><span class="pv" style="color:var(--ledger)">✓ Uploaded</span></div>
-    <div class="prev-row"><span class="pk">Emeka's signature</span><span class="pv" style="color:var(--amber)">Pending</span></div>
-    <div class="prev-row"><span class="pk">Emeka's NIN</span><span class="pv" style="color:var(--amber)">Pending</span></div>
-    <div class="prev-row"><span class="pk">Witness documents</span><span class="pv" style="color:var(--amber)">Pending</span></div>
-  </div>
-
-  <div style="background:var(--ledger-soft);border-radius:8px;padding:13px;margin-bottom:20px;font-size:12.5px;color:var(--ledger);line-height:1.5">A Startora compliance reviewer will check everything before submission. You'll be notified immediately if anything is missing.</div>
-  <button class="btn btn-primary" onclick="nav('tracking.html')">Submit to CAC →</button>
-  <button class="btn btn-ghost" onclick="nav('documents.html')">Go back and complete</button>
-</div>
-</div><script src="../js/app.js"></script></body></html>
+<script src="../js/app.js"></script>
+</body>
+</html>

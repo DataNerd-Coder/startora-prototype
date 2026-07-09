@@ -9,22 +9,26 @@
 </head>
 <body>
 <div class="phone-shell">
-  <div class="statusbar" style="background:var(--paper);color:var(--ink-soft)"><span>9:41</span></div>
-  <div class="flow-screen">
-    <div class="flow-topnav">
-      <button class="flow-back" onclick="nav('splash.html')"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg> Back</button>
-      <div class="flow-step-dots"><div class="flow-dot on"></div><div class="flow-dot"></div><div class="flow-dot"></div><div class="flow-dot"></div></div>
-    </div>
-    <div class="flow-body">
-      <div class="flow-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--ledger)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
-      <div class="flow-title">Got a referral code?</div>
-      <div class="flow-sub">If another founder sent you here, enter their code. You both get a discount on your first service.</div>
-      <div class="field-group"><label class="field-label">Referral code (optional)</label><input class="field" placeholder="e.g. CHIAMAKA-REF" style="font-family:IBM Plex Mono,monospace;letter-spacing:.1em"></div><div class="skip-link" onclick="nav('whatsapp-verify.html')">Skip — I don't have a code</div>
-      <button class="btn btn-primary" onclick="nav('whatsapp-verify.html')">Apply and continue</button>
-    </div>
-  </div>
+<div class="flow-screen">
+          <div class="flow-topnav">
+            <div class="flow-back" data-screen="splash" onclick="nav('../auth/splash.html')"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg> Back</div>
+            <div class="flow-step-dots"><div class="flow-dot on"></div><div class="flow-dot"></div><div class="flow-dot"></div><div class="flow-dot"></div></div>
+          </div>
+          <div class="flow-body">
+            <div class="flow-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--ledger)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+            </div>
+            <div class="flow-title">Got a referral code?</div>
+            <div class="flow-sub">If a founder sent you to Startora, enter their code. You'll both get a discount on your first service.</div>
+            <div class="auth-field-group">
+              <label class="auth-label">Referral code</label>
+              <input class="field" placeholder="e.g. CHIAMAKA-REF" style="margin-bottom:0;letter-spacing:.1em;font-family:'IBM Plex Mono',monospace">
+            </div>
+            <button class="btn btn-primary" data-screen="whatsapp-verify" onclick="nav('../auth/whatsapp-verify.html')" style="margin-top:8px">Apply code &amp; continue</button>
+            <div class="skip-link" data-screen="whatsapp-verify" onclick="nav('../auth/whatsapp-verify.html')">Skip — I don't have a code</div>
+          </div>
+        </div>
 </div>
 <script src="../js/app.js"></script>
-
 </body>
 </html>

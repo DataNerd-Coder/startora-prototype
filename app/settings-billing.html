@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<title>Startora — Billing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+<div class="phone-shell">
+<div class="topbar">
+          <div class="wordmark">START<span>ORA</span></div>
+          <div class="topbar-right">
+            <div class="ai-mic-btn" data-screen="ai-voice" onclick="nav('../app/ai-voice.html')" style="cursor:pointer;width:34px;height:34px;display:flex;align-items:center;justify-content:center;border-radius:50%;border:1.5px solid var(--line);background:var(--paper-raised);margin-right:2px"><svg width="20" height="18" viewBox="0 0 20 18" fill="none"><rect x="0" y="5" width="3" height="8" rx="1.5" fill="var(--ledger)"/><rect x="4.5" y="2" width="3" height="14" rx="1.5" fill="var(--ledger)"/><rect x="9" y="0" width="3" height="18" rx="1.5" fill="var(--ledger)"/><rect x="13.5" y="2" width="3" height="14" rx="1.5" fill="var(--ledger)"/><rect x="18" y="5" width="2" height="8" rx="1" fill="var(--ledger)"/></svg><span class="ai-ask-label">Ask me</span></div>
+            <div class="tb-bell" data-screen="notifications" onclick="nav('../app/notifications.html')" style="cursor:pointer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg><div class="bell-badge"></div></div>
+            <div class="avatar" data-screen="profile" onclick="nav('../app/profile.html')" style="cursor:pointer">CO</div>
+          </div>
+        </div>
+        <div class="body">
+          <div class="back-nav" data-screen="profile" onclick="nav('../app/profile.html')" style="cursor:pointer"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg> Back</div>
+          <h2 style="font-family:Fraunces,serif;font-size:21px;font-weight:500;margin:0 0 4px">Billing history</h2>
+          <p class="settings-note">All payments made through Startora for Chiamaka's Kitchen.</p>
+
+          <div style="font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:10px">2026</div>
+
+          <div class="billing-row">
+            <div>
+              <div style="font-size:13.5px;font-weight:500">CAC + NAFDAC + NDPR</div>
+              <div style="font-size:11.5px;color:var(--ink-soft);margin-top:2px">Jun 22, 2026 · Mastercard ••4829</div>
+            </div>
+            <div style="text-align:right">
+              <div class="billing-amount">₦300,000</div>
+              <div class="billing-status paid" style="margin-top:4px">Paid</div>
+            </div>
+          </div>
+
+          <div style="background:var(--paper-raised);border:1px solid var(--line);border-radius:10px;padding:16px;margin-top:20px;text-align:center">
+            <div style="font-size:13px;font-weight:500;margin-bottom:4px">Total spent on Startora</div>
+            <div style="font-family:Fraunces,serif;font-size:28px;font-weight:500;color:var(--ledger)">₦300,000</div>
+            <div style="font-size:11.5px;color:var(--ink-soft);margin-top:4px">All filings and compliance services · 2026</div>
+          </div>
+
+          <button class="btn btn-ghost" data-screen="payment-receipt" onclick="nav('../app/payment-receipt.html')" style="margin-top:20px">View receipts</button>
+        </div>
+        <div class="tabbar"><div class="on" data-tab="dashboard" data-screen="dashboard" onclick="nav('../app/dashboard.html')" style="cursor:pointer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg><span>Home</span></div><div data-tab="filing" data-screen="filing" onclick="nav('../app/filing-status.html')" style="cursor:pointer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg><span>Filings</span></div><div data-tab="docs" data-screen="docs" onclick="nav('../app/docs.html')" style="cursor:pointer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/></svg><span>Docs</span></div><div data-tab="services" data-screen="services" onclick="nav('../app/services.html')" style="cursor:pointer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg><span>Services</span></div></div>
+      </div>
+<div class="screen" id="scuml-step1">
+<div class="topbar">
+  <div class="wordmark">START<span>ORA</span></div>
+  <div class="topbar-right">
+    <div class="ai-mic-btn" data-screen="ai-voice" onclick="nav('../app/ai-voice.html')" style="cursor:pointer;width:32px;height:32px;display:flex;align-items:center;justify-content:center;border-radius:50%;position:relative;border:1.5px solid var(--line);background:var(--paper-raised)" title="Ask Startora"><svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="5" width="3" height="8" rx="1.5" fill="var(--ledger)"/>
+  <rect x="4.5" y="2" width="3" height="14" rx="1.5" fill="var(--ledger)"/>
+  <rect x="9" y="0" width="3" height="18" rx="1.5" fill="var(--ledger)"/>
+  <rect x="13.5" y="2" width="3" height="14" rx="1.5" fill="var(--ledger)"/>
+  <rect x="18" y="5" width="2" height="8" rx="1" fill="var(--ledger)"/>
+</svg></div>
+    <div class="tb-bell" data-screen="notifications" onclick="nav('../app/notifications.html')" style="cursor:pointer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg><div class="bell-badge"></div></div>
+    <div class="avatar" data-screen="profile" onclick="nav('../app/profile.html')" style="cursor:pointer">CO</div>
+  </div>
+</div>
+        <div class="body">
+          <div class="back-nav" data-screen="services" onclick="nav('../app/services.html')" style="cursor:pointer"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg> Back</div>
+          <div class="reg-progress"><div class="reg-progress-seg now"></div><div class="reg-progress-seg "></div><div class="reg-progress-seg "></div><div class="reg-progress-seg "></div><div class="reg-progress-seg "></div></div>
+          <div class="reg-eyebrow">SCUML Registration · Step 1 of 4</div>
+          <h2 style="font-family:Fraunces,serif;font-size:21px;font-weight:500;margin:0 0 6px">What type of business do you run?</h2>
+          <p style="font-size:12.5px;color:var(--ink-soft);margin:0 0 18px;line-height:1.5">SCUML is required for Designated Non-Financial Institutions (DNFIs). Select your category to confirm eligibility.</p>
+          <div class="info-box">SCUML registration is free of charge and your e-certificate is delivered directly to your email within 14–21 days.</div>
+          <div class="qualifier-card sel" onclick="selectSCUML(this)"><div><div class="qualifier-label">Real Estate</div><div class="qualifier-sub">Agents, developers, property managers</div></div><div class="q-check">✓</div></div>
+          <div class="qualifier-card" onclick="selectSCUML(this)"><div><div class="qualifier-label">Hotel &amp; Hospitality</div><div class="qualifier-sub">Hotels, guest houses, short-let operators</div></div><div class="q-check"></div></div>
+          <div class="qualifier-card" onclick="selectSCUML(this)"><div><div class="qualifier-label">Car Dealership</div><div class="qualifier-sub">Buying and selling of vehicles</div></div><div class="q-check"></div></div>
+          <div class="qualifier-card" onclick="selectSCUML(this)"><div><div class="qualifier-label">Supermarket / Retail</div><div class="qualifier-sub">High-volume consumer goods retail</div></div><div class="q-check"></div></div>
+          <div class="qualifier-card" onclick="selectSCUML(this)"><div><div class="qualifier-label">Professional Services</div><div class="qualifier-sub">Accountants, lawyers, auditors</div></div><div class="q-check"></div></div>
+          <div class="qualifier-card" onclick="selectSCUML(this)"><div><div class="qualifier-label">Jewellery / Luxury Goods</div><div class="qualifier-sub">Dealers in precious metals, gems, luxury items</div></div><div class="q-check"></div></div>
+          <div class="qualifier-card" onclick="selectSCUML(this)"><div><div class="qualifier-label">NGO / Non-profit</div><div class="qualifier-sub">All registered non-profit entities</div></div><div class="q-check"></div></div>
+          <button class="btn btn-primary" data-screen="scuml-step2" onclick="nav('../registration/scuml-step2.html')" style="margin-top:20px">Confirm eligibility →</button>
+        </div>
+</div>
+<script src="../js/app.js"></script>
+</body>
+</html>

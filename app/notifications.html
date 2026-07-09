@@ -1,53 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-<title>Startora — Notifications</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<title>Startora — Notifications</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/styles.css">
 </head>
-<body><div class="phone-shell">
-<div class="statusbar"><span>9:41</span><span>STARTORA</span></div>
+<body>
+<div class="phone-shell">
 <div class="topbar">
-  <div class="wordmark">START<span>ORA</span></div>
-  <div class="topbar-right">
-    <div class="tb-bell" onclick="nav('notifications.html')" style="cursor:pointer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg><div class="bell-badge"></div></div>
-    <div class="avatar" onclick="nav('profile.html')" style="cursor:pointer">CO</div>
-  </div>
+          <div class="wordmark">START<span>ORA</span></div>
+          <div class="topbar-right">
+            <div class="ai-mic-btn" data-screen="ai-voice" onclick="nav('../app/ai-voice.html')" style="cursor:pointer;width:34px;height:34px;display:flex;align-items:center;justify-content:center;border-radius:50%;border:1.5px solid var(--line);background:var(--paper-raised);margin-right:2px"><svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="5" width="3" height="8" rx="1.5" fill="var(--ledger)"/>
+  <rect x="4.5" y="2" width="3" height="14" rx="1.5" fill="var(--ledger)"/>
+  <rect x="9" y="0" width="3" height="18" rx="1.5" fill="var(--ledger)"/>
+  <rect x="13.5" y="2" width="3" height="14" rx="1.5" fill="var(--ledger)"/>
+  <rect x="18" y="5" width="2" height="8" rx="1" fill="var(--ledger)"/>
+</svg><span class="ai-ask-label">Ask me</span></div>
+            <div class="tb-bell" data-screen="notifications" onclick="nav('../app/notifications.html')" style="cursor:pointer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg><div class="bell-badge"></div></div>
+            <div class="avatar" data-screen="profile" onclick="nav('../app/profile.html')" style="cursor:pointer">CO</div>
+          </div>
+        </div>
+        <div class="body">
+          <div class="back-nav" data-screen="dashboard" onclick="nav('../app/dashboard.html')" style="cursor:pointer"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg> Back</div>
+          <h2 style="font-family:Fraunces,serif;font-size:21px;font-weight:500;margin:0 0 14px">Notifications</h2>
+
+          <!-- Tab toggle -->
+          <div class="notif-tabs">
+            <div class="notif-tab on" onclick="switchNotifTab(this,'updates')">
+              Updates <span style="background:var(--stamp);color:#fff;border-radius:10px;padding:1px 7px;font-size:10px;margin-left:4px;display:inline-block">3</span>
+            </div>
+            <div class="notif-tab" onclick="switchNotifTab(this,'messages')">
+              Messages <span style="background:var(--ledger);color:#fff;border-radius:10px;padding:1px 7px;font-size:10px;margin-left:4px;display:inline-block">1</span>
+            </div>
+          </div>
+
+          <!-- UPDATES -->
+          <div class="notif-view active" id="notif-updates">
+            <div class="notif-row unread" data-screen="filing" onclick="nav('../app/filing-status.html')" style="cursor:pointer">
+              <div class="notif-dot unread"></div>
+              <div class="notif-icon action">&#x26A0;&#xFE0F;</div>
+              <div class="notif-body">
+                <div class="notif-title">Action needed — Trademark</div>
+                <div class="notif-desc">We found two similar names. Confirm which to file before we proceed.</div>
+                <div class="notif-time">Today · 8:14 AM</div>
+              </div>
+            </div>
+            <div class="notif-row unread" data-screen="filing-detail" onclick="nav('../app/filing-detail.html')" style="cursor:pointer">
+              <div class="notif-dot unread"></div>
+              <div class="notif-icon update">&#x2705;</div>
+              <div class="notif-body">
+                <div class="notif-title">CAC Registration approved</div>
+                <div class="notif-desc">Certificate is in your Docs. RC number: BN-2026-481923.</div>
+                <div class="notif-time">Yesterday · 3:42 PM</div>
+              </div>
+            </div>
+            <div class="notif-row unread" data-screen="deadlines" onclick="nav('../app/deadlines.html')" style="cursor:pointer">
+              <div class="notif-dot unread"></div>
+              <div class="notif-icon deadline">&#x1F4C5;</div>
+              <div class="notif-body">
+                <div class="notif-title">NDPR Policy review due in 6 months</div>
+                <div class="notif-desc">Annual review due December 2026.</div>
+                <div class="notif-time">Jun 28 · 9:00 AM</div>
+              </div>
+            </div>
+            <div class="notif-row" data-screen="filing" onclick="nav('../app/filing-status.html')" style="cursor:pointer">
+              <div class="notif-dot"></div>
+              <div class="notif-icon update">&#x2705;</div>
+              <div class="notif-body">
+                <div class="notif-title">Payment of &#x20A6;300,000 confirmed</div>
+                <div class="notif-desc">3 filings queued and under review.</div>
+                <div class="notif-time">Jun 22 · 2:30 PM</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- MESSAGES -->
+          <div class="notif-view" id="notif-messages">
+            <div class="msg-thread" data-screen="filing-detail" onclick="nav('../app/filing-detail.html')" style="cursor:pointer">
+              <div class="msg-av">TA</div>
+              <div style="flex:1">
+                <div class="msg-filing">Trademark · STR-2026-04473</div>
+                <div class="msg-preview">We found two similar names. Should we file as "Chiamaka's Kitchen" or "Chiamaka's Kitchen NG"?</div>
+                <div class="msg-time">Today · 8:14 AM</div>
+              </div>
+              <div class="msg-unread"></div>
+            </div>
+            <div class="msg-thread" data-screen="filing-detail" onclick="nav('../app/filing-detail.html')" style="cursor:pointer">
+              <div class="msg-av">TA</div>
+              <div style="flex:1">
+                <div class="msg-filing">CAC Registration · STR-2026-04471</div>
+                <div class="msg-preview read">Certificate is confirmed. RC number: BN-2026-481923.</div>
+                <div class="msg-time">Jun 18 · 3:42 PM</div>
+              </div>
+            </div>
+            <div class="msg-thread" data-screen="filing-detail" onclick="nav('../app/filing-detail.html')" style="cursor:pointer">
+              <div class="msg-av">TA</div>
+              <div style="flex:1">
+                <div class="msg-filing">NAFDAC · STR-2026-04472</div>
+                <div class="msg-preview read">Submitted. Response expected in 5–10 business days.</div>
+                <div class="msg-time">Jun 24 · 11:05 AM</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="tabbar"><div class="on" data-tab="dashboard" data-screen="dashboard" onclick="nav('../app/dashboard.html')" style="cursor:pointer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg><span>Home</span></div><div data-tab="filing" data-screen="filing" onclick="nav('../app/filing-status.html')" style="cursor:pointer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg><span>Filings</span></div><div data-tab="docs" data-screen="docs" onclick="nav('../app/docs.html')" style="cursor:pointer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/></svg><span>Docs</span></div><div data-tab="services" data-screen="services" onclick="nav('../app/services.html')" style="cursor:pointer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg><span>Services</span></div></div>
 </div>
-<div class="body">
-  <div class="back-nav" onclick="nav('dashboard.html')" style="cursor:pointer"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg> Back</div>
-  <h2 style="font-family:Fraunces,serif;font-size:21px;font-weight:500;margin:0 0 4px">Notifications</h2>
-  <p style="font-size:12.5px;color:var(--ink-soft);margin:0 0 20px">3 unread</p>
-  <div class="notif-row unread" onclick="nav('filing-status.html')" style="cursor:pointer">
-    <div class="notif-dot unread"></div>
-    <div class="notif-icon action">⚠️</div>
-    <div class="notif-body"><div class="notif-title">Action needed — Trademark</div><div class="notif-desc">We found two similar names. Confirm which to file before we proceed.</div><div class="notif-time">Today · 8:14 AM</div></div>
-  </div>
-  <div class="notif-row unread" onclick="nav('filing-detail.html')" style="cursor:pointer">
-    <div class="notif-dot unread"></div>
-    <div class="notif-icon update">✅</div>
-    <div class="notif-body"><div class="notif-title">CAC Registration approved</div><div class="notif-desc">Chiamaka's Kitchen is now officially registered. Certificate is in your Docs.</div><div class="notif-time">Yesterday · 3:42 PM</div></div>
-  </div>
-  <div class="notif-row unread" onclick="nav('deadlines.html')" style="cursor:pointer">
-    <div class="notif-dot unread"></div>
-    <div class="notif-icon deadline">📅</div>
-    <div class="notif-body"><div class="notif-title">NDPR Policy review due in 6 months</div><div class="notif-desc">Your annual data protection policy review is due December 2026.</div><div class="notif-time">Jun 28 · 9:00 AM</div></div>
-  </div>
-  <div class="notif-row" onclick="nav('filing-status.html')" style="cursor:pointer">
-    <div class="notif-dot"></div>
-    <div class="notif-icon info">💬</div>
-    <div class="notif-body"><div class="notif-title">Tobi replied on your NAFDAC filing</div><div class="notif-desc">Your NAFDAC application has been submitted. Expected response in 5–10 business days.</div><div class="notif-time">Jun 24 · 11:05 AM</div></div>
-  </div>
-  <div class="notif-row" onclick="nav('payment-receipt.html')" style="cursor:pointer">
-    <div class="notif-dot"></div>
-    <div class="notif-icon update">✅</div>
-    <div class="notif-body"><div class="notif-title">Payment of ₦300,000 confirmed</div><div class="notif-desc">Your payment was received and all 3 filings have been queued.</div><div class="notif-time">Jun 22 · 2:30 PM</div></div>
-  </div>
-</div>
-<div class="tabbar">
-  <div class="on" onclick="nav('dashboard.html')" style="cursor:pointer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg><span>Home</span></div>
-  <div onclick="nav('filing-status.html')" style="cursor:pointer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg><span>Filings</span></div>
-  <div onclick="nav('docs.html')" style="cursor:pointer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/></svg><span>Docs</span></div>
-  <div onclick="nav('services.html')" style="cursor:pointer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg><span>Services</span></div>
-</div>
-</div><script src="../js/app.js"></script></body></html>
+<script src="../js/app.js"></script>
+</body>
+</html>
