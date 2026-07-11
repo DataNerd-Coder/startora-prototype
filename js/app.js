@@ -1,7 +1,7 @@
 /* STARTORA — Shared JS (multi-page) */
 
 // Navigation
-window.nav = function(url) { window.location.href = url; };
+function nav(url) { window.location.href = url; }
 
 // Tabbar active state based on current URL
 document.addEventListener('DOMContentLoaded', function() {
